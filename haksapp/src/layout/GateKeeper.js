@@ -5,7 +5,8 @@ import { AuthedApp } from "./AuthedApp";
 import { UnAuthedApp } from "./UnAuthedApp";
 
 const GateKeeper = () => {
-  const [IsAuthed, setAuthed] = useState(true);
+  // const [IsAuthed, setAuthed] = useState(false);
+  const IsAuthed = true;
   const [randerHandle, setRanderHandle] = useState(false);
 
   const onRanderHandle = () => {
