@@ -9,6 +9,10 @@ const AuthedRoutes = [
     url: "test",
     page: () => import("../page/unauthed/RedirectPage"),
   },
+  {
+    url: "*",
+    page: () => import("../page/unauthed/RedirectPage"),
+  },
 ];
 
 const UnauthedRoutes = [
