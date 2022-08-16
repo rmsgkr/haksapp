@@ -1,7 +1,7 @@
 const AuthedRoutes = [
   {
     url: "/",
-    page: () => import("../page/main/ListPage"),
+    page: () => import("../page/main/MainPage"),
   },
   {
     url: "*",
