@@ -6,10 +6,6 @@ const AuthedRoutes = [
     page: () => import("../page/main/ListPage"),
   },
   {
-    url: "test",
-    page: () => import("../page/unauthed/RedirectPage"),
-  },
-  {
     url: "*",
     page: () => import("../page/unauthed/RedirectPage"),
   },
