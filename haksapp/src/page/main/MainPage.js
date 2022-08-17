@@ -3,14 +3,17 @@ import {
   NotificationOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Breadcrumb, Layout, Menu, Table } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
+import { columns } from "./columns";
+import { data } from "./data";
 const { Header, Content, Footer, Sider } = Layout;
 // const items1 = ["1", "2", "3"].map((key) => ({
 //   key,
 //   label: `nav ${key}`,
 // }));
-const GNB = [{ label: "로고" }];
+const GNB = [{ key: 1, label: "로고" }];
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
   (icon, index) => {
     const key = String(index + 1);
@@ -29,33 +32,40 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
   }
 );
 const LNB = [{}];
+
 const MainPage = () => {
+  const col = columns;
+  const dataSource = data;
   return (
     <>
       <Layout>
         <Header className="header">
           <div className="logo" />
-          <Menu
+          {/* <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={["2"]}
+            defaultSelectedKeys={["1"]}
             items={GNB}
-          />
+            onClick={onClick}
+          /> */}
+          <Link to={"/test"}>
+            <span>{"logo"}</span>
+          </Link>
         </Header>
         <Content
           style={{
             padding: "0 50px",
           }}
         >
-          <Breadcrumb
+          {/* <Breadcrumb
             style={{
               margin: "16px 0",
             }}
           >
             <Breadcrumb.Item>Home</Breadcrumb.Item>
-            {/* <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item> */}
-          </Breadcrumb>
+            <Breadcrumb.Item>List</Breadcrumb.Item>
+            <Breadcrumb.Item>App</Breadcrumb.Item>
+          </Breadcrumb> */}
           <Layout
             className="site-layout-background"
             style={{
@@ -79,7 +89,7 @@ const MainPage = () => {
                 minHeight: "100vh",
               }}
             >
-              Content
+              <Table columns={col} dataSource={dataSource} />
             </Content>
           </Layout>
         </Content>
@@ -88,18 +98,9 @@ const MainPage = () => {
             textAlign: "center",
           }}
         >
-          Ant Design ©2018 Created by Ant UED
+          Created by Hak
         </Footer>
       </Layout>
-      {/* <Link to={"/"}>
-        <span>{"HOME"}</span>
-      </Link>
-      <br />
-      <br />
-      <br />
-      <Link to={"/test"}>
-        <span>{"Test"}</span>
-      </Link> */}
     </>
   );
 };
