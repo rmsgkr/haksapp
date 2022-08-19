@@ -48,8 +48,8 @@ const MainPage = () => {
             items={GNB}
             onClick={onClick}
           /> */}
-          <Link to={"/test"}>
-            <span>{"logo"}</span>
+          <Link to={"/schedule"}>
+            <span>{"schedule"}</span>
           </Link>
         </Header>
         <Content

@@ -4,6 +4,10 @@ const AuthedRoutes = [
     page: () => import("../page/main/MainPage"),
   },
   {
+    url: "/schedule",
+    page: () => import("../page/schedule/ListPage"),
+  },
+  {
     url: "*",
     page: () => import("../page/unauthed/RedirectPage"),
   },
