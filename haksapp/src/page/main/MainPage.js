@@ -13,7 +13,6 @@ const { Header, Content, Footer, Sider } = Layout;
 //   key,
 //   label: `nav ${key}`,
 // }));
-const GNB = [{ key: 1, label: "로고" }];
 const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
   (icon, index) => {
     const key = String(index + 1);
@@ -31,8 +30,6 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
     };
   }
 );
-const LNB = [{}];
-
 const MainPage = () => {
   const col = columns;
   const dataSource = data;
