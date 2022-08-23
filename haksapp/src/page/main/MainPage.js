@@ -13,26 +13,28 @@ const { Header, Content, Footer, Sider } = Layout;
 //   key,
 //   label: `nav ${key}`,
 // }));
-const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
-  (icon, index) => {
-    const key = String(index + 1);
-    return {
-      key: `sub${key}`,
-      icon: React.createElement(icon),
-      label: `subnav ${key}`,
-      children: new Array(4).fill(null).map((_, j) => {
-        const subKey = index * 4 + j + 1;
-        return {
-          key: subKey,
-          label: `option${subKey}`,
-        };
-      }),
-    };
-  }
-);
+// const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
+//   (icon, index) => {
+//     const key = String(index + 1);
+//     return {
+//       key: `sub${key}`,
+//       icon: React.createElement(icon),
+//       label: `subnav ${key}`,
+//       children: new Array(4).fill(null).map((_, j) => {
+//         const subKey = index * 4 + j + 1;
+//         return {
+//           key: subKey,
+//           label: `option${subKey}`,
+//         };
+//       }),
+//     };
+//   }
+// );
+
 const MainPage = () => {
   const col = columns;
   const dataSource = data;
+
   return (
     <>
       <Layout>
@@ -73,12 +75,35 @@ const MainPage = () => {
               <Menu
                 mode="inline"
                 defaultSelectedKeys={["1"]}
-                defaultOpenKeys={["sub1"]}
+                // defaultOpenKeys={["sub1"]}
                 style={{
                   height: "100%",
                 }}
-                items={items2}
+                items={[
+                  {
+                    key: `1`,
+                    icon: React.createElement(UserOutlined),
+                    label: <Link to="/">일정</Link>,
+                  },
+                  {
+                    key: `2`,
+                    icon: React.createElement(LaptopOutlined),
+                    label: <Link to="/schedule">가계부</Link>,
+                  },
+                ]}
               />
+              {/* <Menu mode="horizontal" selectedKeys={[router.pathname]}>
+                <Menu.Item key="/">
+                  <Link href="/">
+                    <a>노드버드</a>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="/profile">
+                  <Link href="/profile">
+                    <a>프로필</a>
+                  </Link>
+                </Menu.Item>
+              </Menu> */}
             </Sider>
             <Content
               style={{
