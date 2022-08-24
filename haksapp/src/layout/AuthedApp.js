@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { DynamicRoute } from "./DynamicRoute";
 import { AuthedRoutes } from "./routes";
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
@@ -17,8 +15,12 @@ const AuthedApp = () => {
 
   return (
     <>
-      <Layout>
-        <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Layout style={{ minHeight: "100vh" }}>
+        <Sider
+          collapsible
+          collapsed={collapsed}
+          onCollapse={(value) => setCollapsed(value)}
+        >
           <div className="logo" />
           <Menu
             theme="dark"
@@ -49,15 +51,7 @@ const AuthedApp = () => {
             style={{
               padding: 0,
             }}
-          >
-            {React.createElement(
-              collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-              {
-                className: "trigger",
-                onClick: () => setCollapsed(!collapsed),
-              }
-            )}
-          </Header>
+          />
           <Content
             className="site-layout-background"
             style={{
