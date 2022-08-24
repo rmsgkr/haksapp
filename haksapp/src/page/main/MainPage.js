@@ -30,7 +30,11 @@ const MainPage = () => {
 
   return (
     <>
-      <Table columns={col} dataSource={dataSource} />
+      <Table
+        columns={col}
+        dataSource={dataSource}
+        pagination={{ position: ["bottomCenter"] }}
+      />
     </>
   );
 };
