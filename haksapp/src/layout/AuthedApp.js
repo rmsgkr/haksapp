@@ -11,6 +11,7 @@ import {
   VideoCameraOutlined,
   LaptopOutlined,
 } from "@ant-design/icons";
+import { FormattedMessage } from "react-intl";
 
 const AuthedApp = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -58,7 +59,12 @@ const AuthedApp = () => {
               <div className="headerIn">
                 <div className="noticeName">
                   {/* <div className="quickNotice"></div> */}
-                  <div className="userName">이근학</div>
+                  <div className="userName">
+                    <FormattedMessage
+                      id="Message.Logout.Hello"
+                      values={{ user: <span>{"이근학"}</span> }}
+                    />
+                  </div>
                 </div>
                 <div className="setupLogin">
                   <Link to="/signOut">logout</Link>
