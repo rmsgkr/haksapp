@@ -9,6 +9,7 @@ import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
+  LaptopOutlined,
 } from "@ant-design/icons";
 const AuthedApp = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -30,18 +31,18 @@ const AuthedApp = () => {
               {
                 key: "1",
                 icon: <UserOutlined />,
-                label: "nav 1",
+                label: <Link to="/">일정</Link>,
               },
               {
                 key: "2",
-                icon: <VideoCameraOutlined />,
-                label: "nav 2",
+                icon: <LaptopOutlined />,
+                label: <Link to="/schedule">가계부</Link>,
               },
-              {
-                key: "3",
-                icon: <UploadOutlined />,
-                label: "nav 3",
-              },
+              // {
+              //   key: "3",
+              //   icon: <UploadOutlined />,
+              //   label: "nav 3",
+              // },
             ]}
           />
         </Sider>
