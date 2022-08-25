@@ -1,4 +1,28 @@
 @import "~antd/dist/antd.css";
+#header .headerIn {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 70px;
+  padding: 0 40px;
+  border-radius: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #002140;
+  /* background-color: #05141f; */
+}
+.noticeName {
+  padding-top: 24px;
+}
+.noticeName::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.noticeName .quickNotice {
+  float: left;
+  position: relative;
+  margin-right: 18px;
+}
 /* start antd */
 #components-layout-demo-custom-trigger .trigger {
   padding: 0 24px;

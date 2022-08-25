@@ -11,6 +11,7 @@ import {
   VideoCameraOutlined,
   LaptopOutlined,
 } from "@ant-design/icons";
+
 const AuthedApp = () => {
   const [collapsed, setCollapsed] = useState(false);
 
@@ -52,7 +53,19 @@ const AuthedApp = () => {
             style={{
               padding: 0,
             }}
-          />
+          >
+            <div id="header">
+              <div className="headerIn">
+                <div className="noticeName">
+                  {/* <div className="quickNotice"></div> */}
+                  <div className="userName">이근학</div>
+                </div>
+                <div className="setupLogin">
+                  <Link to="/signOut">logout</Link>
+                </div>
+              </div>
+            </div>
+          </Header>
           <Content
             className="site-layout-background"
             style={{
