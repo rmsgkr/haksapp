@@ -67,7 +67,9 @@ const AuthedApp = () => {
                   </div>
                 </div>
                 <div className="setupLogin">
+                  {/* <div className="label"> */}
                   <Link to="/signOut">logout</Link>
+                  {/* </div> */}
                 </div>
               </div>
             </div>
@@ -84,13 +86,14 @@ const AuthedApp = () => {
               <DynamicRoute routes={AuthedRoutes}></DynamicRoute>
             </Suspense>
           </Content>
-          <Footer
+          {/* <Footer
             style={{
               textAlign: "center",
+              backgroundColor: "#002140",
             }}
           >
             Created by Hak
-          </Footer>
+          </Footer> */}
         </Layout>
       </Layout>
     </>

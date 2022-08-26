@@ -1,28 +1,4 @@
 @import "~antd/dist/antd.css";
-#header .headerIn {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  height: 70px;
-  padding: 0 40px;
-  border-radius: 0;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #002140;
-  /* background-color: #05141f; */
-}
-.noticeName {
-  padding-top: 24px;
-}
-.noticeName::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.noticeName .quickNotice {
-  float: left;
-  position: relative;
-  margin-right: 18px;
-}
 /* start antd */
 #components-layout-demo-custom-trigger .trigger {
   padding: 0 24px;
@@ -47,6 +23,71 @@
   background: #fff;
 }
 /* end antd */
+/* #header {
+  position: fixed;
+  left: 200px;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  min-width: 700px;
+  max-width: 1620px;
+  padding: 0;
+  background-color: #fff;
+  z-index: 1060;
+} */
+#header .headerIn {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 70px;
+  padding: 0 40px;
+  border-radius: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #002140;
+  /* position: fixed; */
+  /* background-color: #05141f; */
+}
+/* .noticeName {
+  padding-top: 24px;
+} */
+.noticeName::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.noticeName .quickNotice {
+  float: left;
+  position: relative;
+  margin-right: 18px;
+}
+.noticeName .userName {
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  margin: 0;
+  font-size: 15px;
+  color: #b9bdc1;
+}
+.noticeName .userName span {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+}
+.setupLogin {
+  overflow: hidden;
+  /* padding-top: 23px; */
+}
+.setupLogin .label {
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 11px;
+  height: 25px;
+  line-height: 23px;
+  border: 1px solid #fff;
+  font-size: 11px;
+  color: #fff !important;
+}
 .App {
   text-align: center;
 }
