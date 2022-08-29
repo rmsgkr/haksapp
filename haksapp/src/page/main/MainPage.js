@@ -35,6 +35,26 @@ const MainPage = () => {
         dataSource={dataSource}
         pagination={{ position: ["bottomCenter"] }}
       />
+      <Table
+        columns={col}
+        dataSource={dataSource}
+        pagination={{ position: ["bottomCenter"] }}
+      />
+      <Table
+        columns={col}
+        dataSource={dataSource}
+        pagination={{ position: ["bottomCenter"] }}
+      />
+      <Table
+        columns={col}
+        dataSource={dataSource}
+        pagination={{ position: ["bottomCenter"] }}
+      />
+      <Table
+        columns={col}
+        dataSource={dataSource}
+        pagination={{ position: ["bottomCenter"] }}
+      />
     </>
   );
 };
