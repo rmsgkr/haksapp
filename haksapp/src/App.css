@@ -1,4 +1,27 @@
+@charset "UTF-8";
 @import "~antd/dist/antd.css";
+@font-face {
+  font-family: SpoqaHanSansNeo;
+  src: local(☺),
+    url(../public/font/SpoqaHanSansNeo-Regular.woff2) format("woff2"),
+    url(../public/font/SpoqaHanSansNeo-Regular.woff) format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: SpoqaHanSansNeo;
+  src: local(☺),
+    url(../public/font/SpoqaHanSansNeo-Medium.woff2) format("woff2"),
+    url(../public/font/SpoqaHanSansNeo-Medium.woff) format("woff");
+  font-weight: 400;
+}
+
+html,
+body {
+  font-family: SpoqaHanSansNeo, sans-serif !important;
+  font-weight: 300;
+  color: #05141f;
+}
+
 /* start antd */
 #components-layout-demo-custom-trigger .trigger {
   padding: 0 24px;
