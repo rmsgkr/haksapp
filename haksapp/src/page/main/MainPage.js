@@ -1,7 +1,8 @@
-import { Table } from "antd";
+import { PageHeader, Table } from "antd";
 import React from "react";
 import { columns } from "./columns";
 import { data } from "./data";
+import { TimePicker } from "antd";
 // const items1 = ["1", "2", "3"].map((key) => ({
 //   key,
 //   label: `nav ${key}`,
@@ -30,25 +31,11 @@ const MainPage = () => {
 
   return (
     <>
-      <Table
-        columns={col}
-        dataSource={dataSource}
-        pagination={{ position: ["bottomCenter"] }}
-      />
-      <Table
-        columns={col}
-        dataSource={dataSource}
-        pagination={{ position: ["bottomCenter"] }}
-      />
-      <Table
-        columns={col}
-        dataSource={dataSource}
-        pagination={{ position: ["bottomCenter"] }}
-      />
-      <Table
-        columns={col}
-        dataSource={dataSource}
-        pagination={{ position: ["bottomCenter"] }}
+      <PageHeader
+        className="site-page-header"
+        title="일정"
+        // breadcrumb={{ routes }}
+        // subTitle="This is a subtitle"
       />
       <Table
         columns={col}
