@@ -2,7 +2,7 @@ import { Menu } from "antd";
 import Layout, { Content, Footer, Header } from "antd/lib/layout/layout";
 import Sider from "antd/lib/layout/Sider";
 import React, { Suspense, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { DynamicRoute } from "./DynamicRoute";
 import { AuthedRoutes } from "./routes";
 import {
@@ -15,7 +15,8 @@ import { FormattedMessage } from "react-intl";
 
 const AuthedApp = () => {
   const [collapsed, setCollapsed] = useState(false);
-
+  const location = useLocation();
+  // const router = useNavigate();
   return (
     <>
       <Layout style={{ minHeight: "100vh" }}>
@@ -28,15 +29,16 @@ const AuthedApp = () => {
           <Menu
             theme="dark"
             mode="inline"
-            defaultSelectedKeys={["1"]}
+            defaultSelectedKeys={["/"]}
+            selectedKeys={[location.pathname]}
             items={[
               {
-                key: "1",
+                key: "/",
                 icon: <UserOutlined />,
                 label: <Link to="/">일정</Link>,
               },
               {
-                key: "2",
+                key: "/schedule",
                 icon: <LaptopOutlined />,
                 label: <Link to="/schedule">가계부</Link>,
               },
