@@ -25,7 +25,7 @@ import { data } from "./data";
 //   }
 // );
 
-// test commit
+// TODO: 일정(캘린더) 로직 구현
 const MainPage = () => {
   // const col = columns;
   // const dataSource = data;
