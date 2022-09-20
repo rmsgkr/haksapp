@@ -41,7 +41,6 @@ function App() {
     moment.locale(curLanguage);
   }, []);
 
-  console.log(locale?.pvLocale);
   return (
     <IntlProvider
       locale={locale?.language}
@@ -50,9 +49,7 @@ function App() {
         ...langConfig[DEFAULT],
         ...locale?.pvLocale,
       }}
-      onError={(e) => {
-        // console.log(e);
-      }}
+      onError={(e) => {}}
     >
       <BrowserRouter>
         <GateKeeper />

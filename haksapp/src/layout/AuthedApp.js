@@ -42,11 +42,6 @@ const AuthedApp = () => {
                 icon: <LaptopOutlined />,
                 label: <Link to="/schedule">가계부</Link>,
               },
-              // {
-              //   key: "3",
-              //   icon: <UploadOutlined />,
-              //   label: "nav 3",
-              // },
             ]}
           />
         </Sider>
