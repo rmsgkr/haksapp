@@ -98,20 +98,20 @@ const MainPage = () => {
     return listData || [];
   };
 
-  const getMonthData = (value) => {
-    if (value.month() === 8) {
-      return 1394;
-    }
-  };
-  const monthCellRender = (value) => {
-    const num = getMonthData(value);
-    return num ? (
-      <div className="notes-month">
-        <section>{num}</section>
-        <span>Backlog number</span>
-      </div>
-    ) : null;
-  };
+  // const getMonthData = (value) => {
+  //   if (value.month() === 8) {
+  //     return 1394;
+  //   }
+  // };
+  // const monthCellRender = (value) => {
+  //   const num = getMonthData(value);
+  //   return num ? (
+  //     <div className="notes-month">
+  //       <section>{num}</section>
+  //       <span>Backlog number</span>
+  //     </div>
+  //   ) : null;
+  // };
 
   const dateCellRender = (value) => {
     const listData = getListData(value);
@@ -135,9 +135,8 @@ const MainPage = () => {
       />
       <Calendar
         dateCellRender={dateCellRender}
-        monthCellRender={monthCellRender}
+        // monthCellRender={monthCellRender}
       />
-      ;
       {/* <Table
         columns={col}
         dataSource={dataSource}
