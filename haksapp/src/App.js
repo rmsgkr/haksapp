@@ -39,7 +39,7 @@ function App() {
   // moment 기본 언어 설정
   useEffect(() => {
     moment.locale(curLanguage);
-  }, []);
+  }, [curLanguage]);
 
   return (
     <IntlProvider
