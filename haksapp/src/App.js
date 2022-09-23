@@ -5,6 +5,7 @@ import { IntlProvider } from "react-intl";
 import * as langConfig from "./locale";
 import { useEffect, useState } from "react";
 import moment from "moment";
+import "moment/locale/ko";
 import _ from "lodash";
 import { ConfigProvider } from "antd"; // 추가
 import koKR from "antd/lib/locale/ko_KR"; // 추가
