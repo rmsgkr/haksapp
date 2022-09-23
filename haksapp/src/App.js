@@ -6,6 +6,8 @@ import * as langConfig from "./locale";
 import { useEffect, useState } from "react";
 import moment from "moment";
 import _ from "lodash";
+import { ConfigProvider } from "antd"; // 추가
+import koKR from "antd/lib/locale/ko_KR"; // 추가
 const DEFAULT = "ko";
 const ANT_CONFIG = { ko: "koKR", ja: "jaJP" };
 
@@ -52,7 +54,9 @@ function App() {
       onError={(e) => {}}
     >
       <BrowserRouter>
-        <GateKeeper />
+        <ConfigProvider locale={koKR}>
+          <GateKeeper />
+        </ConfigProvider>
       </BrowserRouter>
     </IntlProvider>
   );

@@ -1,4 +1,5 @@
 import { Badge, Calendar, PageHeader, Table } from "antd";
+// import locale from "antd/es/calendar/locale/ko_KR";
 import React from "react";
 import { columns } from "./columns";
 import { data } from "./data";
@@ -31,7 +32,7 @@ const MainPage = () => {
   // const dataSource = data;
   const getListData = (value) => {
     let listData;
-
+    console.log("value.localeData()", value.localeData());
     switch (value.date()) {
       case 8:
         listData = [
@@ -45,53 +46,6 @@ const MainPage = () => {
           },
         ];
         break;
-
-      case 10:
-        listData = [
-          {
-            type: "warning",
-            content: "This is warning event.",
-          },
-          {
-            type: "success",
-            content: "This is usual event.",
-          },
-          {
-            type: "error",
-            content: "This is error event.",
-          },
-        ];
-        break;
-
-      case 15:
-        listData = [
-          {
-            type: "warning",
-            content: "This is warning event",
-          },
-          {
-            type: "success",
-            content: "This is very long usual event。。....",
-          },
-          {
-            type: "error",
-            content: "This is error event 1.",
-          },
-          {
-            type: "error",
-            content: "This is error event 2.",
-          },
-          {
-            type: "error",
-            content: "This is error event 3.",
-          },
-          {
-            type: "error",
-            content: "This is error event 4.",
-          },
-        ];
-        break;
-
       default:
     }
 
@@ -115,6 +69,7 @@ const MainPage = () => {
 
   const dateCellRender = (value) => {
     const listData = getListData(value);
+    console.log("listData", listData);
     return (
       <ul className="events">
         {listData.map((item) => (
@@ -125,6 +80,7 @@ const MainPage = () => {
       </ul>
     );
   };
+  // console.log("locale", locale);
   return (
     <>
       <PageHeader
@@ -134,9 +90,12 @@ const MainPage = () => {
         // subTitle="This is a subtitle"
       />
       <Calendar
+        // locale={locale}
         dateCellRender={dateCellRender}
+        // onSelect={onSelectDateCell}
         // monthCellRender={monthCellRender}
       />
+
       {/* <Table
         columns={col}
         dataSource={dataSource}
